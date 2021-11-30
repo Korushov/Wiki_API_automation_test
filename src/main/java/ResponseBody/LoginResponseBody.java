@@ -1,18 +1,14 @@
 package ResponseBody;
 
-import javafx.application.Application;
-import javafx.stage.Stage;
+import Entities.Login;
+import Entities.WarningsBlock;
+import lombok.Data;
 
-import static javafx.application.Application.launch;
-
+@Data
 public class LoginResponseBody {
 
-    public static void main(String[] args) {
-        launch(args);
-    }
+    private WarningsBlock warnings;
 
-    //@Override
-    public void start(Stage primaryStage) {
+    private Login login;
 
-    }
 }

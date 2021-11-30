@@ -1,5 +1,11 @@
 package ResponseBody;
 
+import Entities.Antispoof;
+import lombok.Data;
+
+@Data
 public class AntispoofResponseBody {
-    private AntispoofResult antispoof;
+
+    private Antispoof antispoof;
+
 }
