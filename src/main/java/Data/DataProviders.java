@@ -1,6 +1,5 @@
 package Data;
 
-import jdk.jfr.DataAmount;
 import org.testng.annotations.DataProvider;
 
 public class DataProviders {

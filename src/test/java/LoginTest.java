@@ -13,6 +13,7 @@ import io.restassured.response.Response;
 import org.testng.annotations.Test;
 
 
+import javax.servlet.http.HttpSession;
 
 import static io.restassured.RestAssured.given;
 
@@ -45,6 +46,7 @@ public class LoginTest {
     public void SuccessLogin(){
         RestAssured.baseURI = "https://test.wikipedia.org";
         LoginRequestBody requestBody =  new LoginRequestBody("secret", "user", getToken() + "\\");
+//        HttpSession session = request.getSession();
         Response response = given()
                 .filter(sessionFilter)
 //                .sessionId("1234")
@@ -60,6 +62,14 @@ public class LoginTest {
 
         response.getBody().prettyPrint();
     }
+
+
+    @Test
+    public void Login() {
+
+    }
+
+
 
 //    @Test
 //    public void loginWithoutDomain() {
